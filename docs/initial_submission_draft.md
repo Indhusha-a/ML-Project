@@ -1,6 +1,6 @@
 # IT3091 Machine Learning — Initial Submission
 
-**Group Number:** [Your Group Number]
+**Group Number:** 2026-DS-83
 **Track:** Guided Data Track
 **Dataset Code:** 3 — Education (Student Performance)
 **Dataset Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/320/student-performance)
