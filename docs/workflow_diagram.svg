@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1450" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #eef3fb; stroke: #2a5caa; stroke-width: 2; rx: 10; }
+    .boxalt { fill: #fdf3e7; stroke: #c97a1a; stroke-width: 2; rx: 10; }
+    .title { font-size: 16px; font-weight: 700; fill: #1a1a1a; text-anchor: middle; }
+    .sub { font-size: 12px; fill: #333; text-anchor: middle; }
+    .arrow { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .heading { font-size: 22px; font-weight: 700; fill: #1a1a1a; text-anchor: middle; }
+  </style>
+
+  <text x="450" y="35" class="heading">Student Performance At-Risk Prediction — Project Workflow</text>
+
+  <!-- 1 -->
+  <rect x="300" y="60" width="300" height="60" class="box"/>
+  <text x="450" y="85" class="title">1. Business Problem</text>
+  <text x="450" y="105" class="sub">Identify students at risk, support early intervention</text>
+  <path d="M450,120 L450,150" class="arrow"/>
+
+  <!-- 2 -->
+  <rect x="300" y="150" width="300" height="70" class="box"/>
+  <text x="450" y="175" class="title">2. Lens &amp; Task Formulation</text>
+  <text x="450" y="193" class="sub">Primary: G3 regression  |  Secondary: at-risk</text>
+  <text x="450" y="209" class="sub">flagging (predicted G3 &lt; 10)</text>
+  <path d="M450,220 L450,250" class="arrow"/>
+
+  <!-- 3 -->
+  <rect x="300" y="250" width="300" height="60" class="box"/>
+  <text x="450" y="275" class="title">3. Data Understanding</text>
+  <text x="450" y="295" class="sub">395 students, 33 attributes, no nulls/duplicates</text>
+  <path d="M450,310 L450,340" class="arrow"/>
+
+  <!-- 4 -->
+  <rect x="300" y="340" width="300" height="60" class="box"/>
+  <text x="450" y="365" class="title">4. Train/Test Split</text>
+  <text x="450" y="385" class="sub">80/20 split — leakage boundary set here</text>
+  <path d="M450,400 L450,430" class="arrow"/>
+
+  <!-- 5 -->
+  <rect x="300" y="430" width="300" height="70" class="box"/>
+  <text x="450" y="455" class="title">5. EDA (train set only)</text>
+  <text x="450" y="473" class="sub">G3 skew, G3=0 investigation, absences</text>
+  <text x="450" y="489" class="sub">outliers, G1/G2 correlation, subgroups</text>
+  <path d="M450,500 L450,530" class="arrow"/>
+
+  <!-- 6 -->
+  <rect x="300" y="530" width="300" height="70" class="box"/>
+  <text x="450" y="555" class="title">6. Preprocessing Pipeline</text>
+  <text x="450" y="573" class="sub">Encoding, scaling, log1p(absences),</text>
+  <text x="450" y="589" class="sub">fit on train only (shared across all models)</text>
+  <path d="M450,600 L450,630" class="arrow"/>
+
+  <!-- 7 heading -->
+  <text x="450" y="650" class="title">7. Model Building + 5-Fold CV Tuning</text>
+
+  <!-- 4 model boxes -->
+  <rect x="60"  y="665" width="190" height="55" class="boxalt"/>
+  <text x="155" y="688" class="sub" style="font-weight:700">Linear Regression</text>
+  <text x="155" y="706" class="sub">(baseline)</text>
+
+  <rect x="270" y="665" width="190" height="55" class="boxalt"/>
+  <text x="365" y="688" class="sub" style="font-weight:700">Ridge Regression</text>
+  <text x="365" y="706" class="sub">alpha = 10.0</text>
+
+  <rect x="480" y="665" width="190" height="55" class="boxalt"/>
+  <text x="575" y="688" class="sub" style="font-weight:700">Random Forest</text>
+  <text x="575" y="706" class="sub">best CV, but overfit</text>
+
+  <rect x="690" y="665" width="190" height="55" class="boxalt"/>
+  <text x="785" y="688" class="sub" style="font-weight:700">Gradient Boosting</text>
+  <text x="785" y="706" class="sub">best test result</text>
+
+  <path d="M155,720 L155,750 L450,750" class="arrow"/>
+  <path d="M365,720 L365,745 L450,750" class="arrow" marker-end="none"/>
+  <path d="M575,720 L575,745 L450,750" class="arrow" marker-end="none"/>
+  <path d="M785,720 L785,750 L450,750" class="arrow" marker-end="none"/>
+
+  <!-- 8 -->
+  <rect x="300" y="750" width="300" height="80" class="box"/>
+  <text x="450" y="775" class="title">8. Evaluation (test set, once)</text>
+  <text x="450" y="793" class="sub">RMSE / MAE / R², train-test gap,</text>
+  <text x="450" y="809" class="sub">residual analysis — catches RF overfitting</text>
+  <path d="M450,830 L450,860" class="arrow"/>
+
+  <!-- 9 -->
+  <rect x="300" y="860" width="300" height="70" class="box"/>
+  <text x="450" y="885" class="title">9. Feature Importance</text>
+  <text x="450" y="903" class="sub">Tree-based + permutation, both agree:</text>
+  <text x="450" y="919" class="sub">G2, absences, G1</text>
+  <path d="M450,930 L450,960" class="arrow"/>
+
+  <!-- 10 -->
+  <rect x="300" y="960" width="300" height="70" class="box"/>
+  <text x="450" y="985" class="title">10. At-Risk Report</text>
+  <text x="450" y="1003" class="sub">Predicted G3 &lt; 10 flag — 100% recall,</text>
+  <text x="450" y="1019" class="sub">73% precision on test set</text>
+  <path d="M450,1030 L450,1060" class="arrow"/>
+
+  <!-- 11 -->
+  <rect x="300" y="1060" width="300" height="80" class="box"/>
+  <text x="450" y="1085" class="title">11. Recommendation &amp;</text>
+  <text x="450" y="1105" class="title">Limitations</text>
+  <text x="450" y="1125" class="sub">Gradient Boosting recommended for deployment</text>
+
+  <rect x="150" y="1180" width="600" height="2" fill="#ccc"/>
+  <text x="450" y="1210" class="sub" style="font-style:italic">Full reasoning for every decision above is recorded in docs/decision_log.md</text>
+</svg>
