@@ -2,6 +2,8 @@
 
 IT3091 Machine Learning | Guided Data Track | Education (Dataset Code 3)
 
+**Demo Video:** https://youtu.be/sAZqNCwBggo
+
 ## Business Problem
 
 An academic institution wants to identify patterns that support student

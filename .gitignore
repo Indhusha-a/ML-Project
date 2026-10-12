@@ -1,6 +1,9 @@
 # Personal-use instructions (not for submission/sharing)
 instructions/
 
+# Other members' unresolved/unreconciled files (not for submission)
+other_mems/
+
 # Virtual environment
 venv/
 .venv/
