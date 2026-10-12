@@ -1,0 +1,13 @@
+Subgroup,Value,n,RMSE,MAE,Mean error (pred - actual)
+sex,F,38,4.083,3.259,0.689
+sex,M,41,3.918,3.265,-0.534
+address,R,19,3.804,3.263,1.509
+address,U,60,4.058,3.261,-0.406
+romantic,no,56,4.208,3.403,-0.308
+romantic,yes,23,3.433,2.919,0.937
+internet,no,15,3.965,3.277,-0.387
+internet,yes,64,4.006,3.258,0.158
+school,GP,67,4.157,3.413,0.01
+school,MS,12,2.961,2.416,0.299
+higher,no,2,2.253,2.223,-2.223
+higher,yes,77,4.033,3.289,0.114

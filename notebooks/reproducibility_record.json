@@ -1,0 +1,44 @@
+{
+  "created": "2026-10-12T21:04:31",
+  "random_seed": 42,
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "library_versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "dataset": {
+    "file": "student-mat.csv",
+    "rows": 395,
+    "columns": 33,
+    "md5": "4dc304be95c60de6ee13fb8769469dd7",
+    "sha256": "e47f9ee225e1ee6e69b7564e6dac7123e80b8486677fe111f351964cef5dec80"
+  },
+  "settings": {
+    "drop_zero_g3": false,
+    "train_test_split": "80/20, random_state=42",
+    "cv": "5-fold KFold, shuffle=True, random_state=42",
+    "search": "RandomizedSearchCV, n_iter=40, scoring=neg RMSE",
+    "permutation_importance": "30 repeats on test set, random_state=42"
+  },
+  "best_params_set_A": {
+    "model__subsample": 1.0,
+    "model__reg_lambda": 10,
+    "model__n_estimators": 200,
+    "model__min_child_weight": 5,
+    "model__max_depth": 5,
+    "model__learning_rate": 0.05,
+    "model__colsample_bytree": 0.8
+  },
+  "best_params_set_B": {
+    "model__subsample": 0.8,
+    "model__reg_lambda": 1,
+    "model__n_estimators": 500,
+    "model__min_child_weight": 5,
+    "model__max_depth": 2,
+    "model__learning_rate": 0.01,
+    "model__colsample_bytree": 1.0
+  }
+}

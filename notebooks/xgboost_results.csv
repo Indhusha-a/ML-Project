@@ -1,0 +1,4 @@
+Model,CV RMSE,Train RMSE,Test RMSE,Train-Test Gap,Test MAE,Test R2
+XGBoost A (with G1/G2),1.422,0.431,2.163,1.733,1.251,0.772
+XGBoost B (without G1/G2),3.925,3.253,3.998,0.745,3.262,0.22
+Mean baseline,,4.583,4.55,-0.033,3.646,-0.01
